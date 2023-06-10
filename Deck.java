@@ -9,12 +9,12 @@ public class Deck {
 	public Deck() {
 		cards = new ArrayList<>();
 		String[] suits = {"Hearts", "Diamonds", "Clubs", "Spades"};
-		String[] names = {"Ace", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King"};
+		String[] names = {"Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King", "Ace"};
 		
 		for (String suit : suits) {
 			for (int i = 0; i < names.length; i++) {
 				String cardName = names[i] + " of " + suit;
-				int cardValue = i + 1; //This assumes Ace is 1, Two is 2, etc.
+				int cardValue = i + 1; //This assumes Two is 2 and Ace is 14 etc.
 				Card card = new Card(cardValue, cardName);
 				cards.add(card);
 			}
